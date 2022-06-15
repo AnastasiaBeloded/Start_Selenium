@@ -37,7 +37,7 @@ public class StartCss {
         wd.findElement(By.cssSelector("#root"));
         ///class---class
         wd.findElement(By.cssSelector(".container"));
-        wd.findElement(By.cssSelector("[href='/home/]'");
+        wd.findElement(By.cssSelector("[href='/home/]'"));
 
 
 
