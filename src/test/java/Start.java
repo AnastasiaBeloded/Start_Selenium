@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class Start {
     WebDriver wd;
 
@@ -59,7 +61,7 @@ public class Start {
         WebElement emailTextBox = wd.findElement(By.cssSelector("[placeholder='Email']"));
         emailTextBox.click();
         emailTextBox.clear();
-        emailTextBox.sendKeys("noam@gmail.com");
+        emailTextBox.sendKeys("noam1@gmail.com");
 
         WebElement passwordTextBox = wd.findElement(By.cssSelector("[placeholder='Password']"));
         passwordTextBox.click();
@@ -67,8 +69,14 @@ public class Start {
         passwordTextBox.sendKeys("Nnoam12345$");
 
 
-        WebElement loginButton = wd.findElement(By.cssSelector("div>button:last-child"));
+       // WebElement loginButton = wd.findElement(By.cssSelector("div>button:last-child"));
+
+        List<WebElement>list = wd.findElements(By.cssSelector("button"));
+        WebElement loginButton =list.get(1);
+
         loginButton.click();
+
+
 
     }
 
